@@ -1,87 +1,181 @@
 <!DOCTYPE html>
+<!-- DOCTYPE tells the browser "this is HTML5". Always the very first line. -->
 <html lang="en">
-  <head>
-    <title>About Me!</title>
-  </head>
-  <style>
-body {background-color: powderblue;}
-h1   {color: blue;}
-p    {color: red;}
-</style>
-  <body style="background-color:powderblue;">
-    <h1 style="font-family:courier;">yes, i'm retarded.</h1>
-      <p style="text-align:center;">no seriously though, <br> i'm like, very stupid.</p>
-    <hr>
-    <h2>BUT</h2>
-      <p style="color:red;">that's probably why people like me.</p>
-    <a href="https://www.youtube.com">boi pussyx</a>
-    <img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142">
-  <p title="I'm a tooltip">This is a paragraph.</p>
-    <h1 style="font-size:60px;">Heading 1</h1>
-    <pre>cool thing is 
-    im a single
-    tag</pre>
-    <h1> a small poem</h1>
-    <pre style="background-color:tomato;">
-    twinkle twinkle little star.
-    i will hit you with my car.
+<!-- <html> wraps the whole page. lang="en" = page language. -->
 
-    down into a coffin.
-    i will send you like yo mama.</pre>
-    <b>This text is bold</b>
-    <strong>This text is important!</strong>
-    <i>This text is italic</i>
-    <em>This text is emphasized</em>
-    <small>This is some smaller text.</small>
-    <p>Do not forget to buy <mark>milk</mark> today.</p>
-    <p>My favorite color is <del>blue</del> <ins>red</ins>.</p>
-    <p>This is <sub>subscripted</sub> text.</p>
-    <p>This is <sup>superscripted</sup> text.</p>
-    <p>Here is a quote from WWF's website:</p>
-<blockquote cite="http://www.worldwildlife.org/who/index.html">
-For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF works in nearly 100 countries. At every level, we collaborate with people around the world to develop and deliver innovative solutions that protect communities, wildlife, and the places in which they live.
-</blockquote>
-    <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
-    <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
-    <address>
-Written by John Doe.<br>
-Visit us at:<br>
-Example.com<br>
-Box 564, Disneyland<br>
-USA
-</address>
-    <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
-    <bdo dir="rtl">This text will be written from right to left</bdo>
-    <!-- This is a comment -->
-    <!--
-<p>Look at this cool image:</p>
-<img border="0" src="pic_trulli.jpg" alt="Trulli">
--->
-    <p>This <!-- great text --> is a paragraph.</p>
-    <h1 style="background-color:DodgerBlue;">Hello World</h1>
-<p style="background-color:Tomato;">Lorem ipsum...</p>
-    <h1 style="color:Tomato;">Hello World</h1>
-<p style="color:DodgerBlue;">Lorem ipsum...</p>
-<p style="color:MediumSeaGreen;">Ut wisi enim...</p>
-    <h1 style="border:2px solid Tomato;">Hello World</h1>
-<h1 style="border:2px solid DodgerBlue;">Hello World</h1>
-<h1 style="border:2px solid Violet;">Hello World</h1>
-    <h1 style="background-color:rgb(255, 99, 71);">...</h1>
-<h1 style="background-color:#ff6347;">...</h1>
-<h1 style="background-color:hsl(9, 100%, 64%);">...</h1>
-
-<h1 style="background-color:rgba(255, 99, 71, 0.5);">...</h1>
-<h1 style="background-color:hsla(9, 100%, 64%, 0.5);">...</h1>
-  </body>
-</html>
-<html>
 <head>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <!-- HEAD = info ABOUT the page (not shown on the page itself) -->
+  <title>About Me!</title>  <!-- text shown in the browser tab -->
 
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
+  <!-- Link to an external CSS file (it must exist next to this file) -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Internal CSS: rules written once, applied to every matching tag.
+       Format:  selector { property: value; } -->
+  <style>
+    body { background-color: powderblue; }
+    h1   { color: blue; }
+    p    { color: red; }
+  </style>
+</head>
+
+<!-- BODY = everything visible on the page.
+     style="..." on a tag is INLINE CSS (affects only that one tag). -->
+<body style="background-color:powderblue;">
+
+
+  <!-- ============================================
+       1. HEADINGS  (h1 = biggest ... h6 = smallest)
+       ============================================ -->
+  <h1 style="font-family:courier;">About me</h1>
+  <h2>Heading 2</h2>
+  <h1 style="font-size:60px;">Heading 1 with a custom size</h1>
+
+
+  <!-- ============================================
+       2. PARAGRAPHS, LINE BREAKS, LINES
+       ============================================ -->
+  <!-- <p> = paragraph. text-align:center centers it. -->
+  <p style="text-align:center;">
+    first line, <br>  <!-- <br> = line break (no closing tag) -->
+    second line.
+  </p>
+
+  <hr>  <!-- <hr> = horizontal line / topic divider (no closing tag) -->
+
+  <p style="color:red;">A paragraph with an inline color.</p>
+  <p title="I'm a tooltip">Hover over me: the title attribute makes a tooltip.</p>
+
+
+  <!-- ============================================
+       3. LINKS AND IMAGES
+       ============================================ -->
+  <!-- <a href="URL">text</a> = link -->
+  <a href="https://www.youtube.com">A link to YouTube</a>
+
+  <!-- <img> = image (no closing tag).
+       src = file path, alt = text if image fails, width/height = size in px -->
+  <img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142">
+
+
+  <!-- ============================================
+       4. PREFORMATTED TEXT
+       <pre> keeps spaces and line breaks exactly as typed
+       ============================================ -->
+  <pre>
+cool thing is
+    I'm a single
+    tag
+  </pre>
+
+  <h1>A small poem</h1>
+  <pre style="background-color:tomato;">
+    twinkle twinkle little star.
+    how I wonder what you are.
+
+    up above the world so high.
+    like a diamond in the sky.
+  </pre>
+
+
+  <!-- ============================================
+       5. TEXT FORMATTING
+       ============================================ -->
+  <b>Bold (looks bold only)</b>
+  <strong>Strong (bold AND important)</strong>
+  <i>Italic (looks italic only)</i>
+  <em>Emphasized (italic AND stressed)</em>
+  <small>Smaller text</small>
+
+  <p>Do not forget to buy <mark>milk</mark> today.</p>        <!-- <mark> = highlight -->
+  <p>My favorite color is <del>blue</del> <ins>red</ins>.</p> <!-- del = strikethrough, ins = underline -->
+  <p>This is <sub>subscripted</sub> text.</p>                 <!-- sub = H2O style -->
+  <p>This is <sup>superscripted</sup> text.</p>               <!-- sup = x2 style -->
+
+
+  <!-- ============================================
+       6. QUOTES AND CITATIONS
+       ============================================ -->
+  <p>Here is a quote from WWF's website:</p>
+
+  <!-- <blockquote> = long quote, shown indented. cite = source URL (not visible) -->
+  <blockquote cite="http://www.worldwildlife.org/who/index.html">
+    For 60 years, WWF has worked to help people and nature thrive. As the
+    world's leading conservation organization, WWF works in nearly 100
+    countries. At every level, we collaborate with people around the world to
+    develop and deliver innovative solutions that protect communities,
+    wildlife, and the places in which they live.
+  </blockquote>
+
+  <!-- <q> = short inline quote (browser adds the quote marks) -->
+  <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+
+  <!-- <abbr> = abbreviation. title shows the full name on hover -->
+  <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+
+  <!-- <address> = contact info (usually italic) -->
+  <address>
+    Written by John Doe.<br>
+    Visit us at:<br>
+    Example.com<br>
+    Box 564, Disneyland<br>
+    USA
+  </address>
+
+  <!-- <cite> = title of a creative work (italic) -->
+  <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+
+  <!-- <bdo dir="rtl"> = override text direction (right to left) -->
+  <bdo dir="rtl">This text will be written from right to left</bdo>
+
+
+  <!-- ============================================
+       7. HTML COMMENTS
+       ============================================ -->
+  <!-- This is a comment: the browser ignores it. -->
+
+  <!-- Comments can also hide code temporarily:
+  <p>Look at this cool image:</p>
+  <img border="0" src="pic_trulli.jpg" alt="Trulli">
+  -->
+
+  <p>This <!-- great text --> is a paragraph (the comment is invisible).</p>
+
+
+  <!-- ============================================
+       8. CSS COLORS (inline styles)
+       ============================================ -->
+
+  <!-- background-color = color behind the element -->
+  <h1 style="background-color:DodgerBlue;">Hello World</h1>
+  <p style="background-color:Tomato;">Lorem ipsum...</p>
+
+  <!-- color = color of the text -->
+  <h1 style="color:Tomato;">Hello World</h1>
+  <p style="color:DodgerBlue;">Lorem ipsum...</p>
+  <p style="color:MediumSeaGreen;">Ut wisi enim...</p>
+
+  <!-- border: width style color -->
+  <h1 style="border:2px solid Tomato;">Hello World</h1>
+  <h1 style="border:2px solid DodgerBlue;">Hello World</h1>
+  <h1 style="border:2px solid Violet;">Hello World</h1>
+
+  <!-- Same color (tomato), written 3 different ways -->
+  <h1 style="background-color:rgb(255, 99, 71);">RGB: rgb(red, green, blue)</h1>
+  <h1 style="background-color:#ff6347;">HEX: #rrggbb</h1>
+  <h1 style="background-color:hsl(9, 100%, 64%);">HSL: hsl(hue, saturation, lightness)</h1>
+
+  <!-- Add transparency: RGBA / HSLA (last number 0 = invisible, 1 = solid) -->
+  <h1 style="background-color:rgba(255, 99, 71, 0.5);">RGBA, 50% see-through</h1>
+  <h1 style="background-color:hsla(9, 100%, 64%, 0.5);">HSLA, 50% see-through</h1>
+
+
+  <!-- ============================================
+       9. STYLE.CSS TEST
+       (these two get styled by style.css if the file exists)
+       ============================================ -->
+  <h1>This is a heading</h1>
+  <p>This is a paragraph.</p>
 
 </body>
 </html>
